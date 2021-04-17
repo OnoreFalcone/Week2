@@ -3,6 +3,9 @@
  */
 package Week2;
 
+import com.google.common.net.InternetDomainName;
+import com.mitchtalmadge.asciidata.graph.ASCIIGraph;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +13,16 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        InternetDomainName owner =
+        InternetDomainName.from("blog.overops.com").topPrivateDomain(); // returns takipi.com
+        boolean valid = InternetDomainName.isValid("takipi.monsters");
+
+        System.out.println(owner.toString());
+        System.out.println("valid:" + valid);
+
+
+        String graph = ASCIIGraph.fromSeries(new double[] { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0,}).plot();  
+        System.out.println(graph);
     }
 }
