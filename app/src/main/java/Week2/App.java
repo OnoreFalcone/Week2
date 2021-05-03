@@ -61,8 +61,10 @@ public class App {
         System.out.println();
          //cheyco end
        
-         //colin
-
+        //colin      
+        System.out.println();
+        artGen.printTextArt("Goodbye :)", App.ART_SIZE_MEDIUM, ASCIIArtFont.ART_FONT_MONO,"-");
+        System.out.println();
         
     }
 
